@@ -1,0 +1,29 @@
+.err {
+    color: red;
+    font-style: italic;
+    display: none;
+}
+
+.asterisk {
+    color: red;
+}
+
+#emailFormat {
+    display: none; /* Hides the element by default */
+}
+
+.otherOption {
+    display: none;
+}
+
+#otherOption{
+    display: none;
+}
+
+#err-linked {
+    display: none;
+}
+
+#err-meet {
+    display: none;
+} 

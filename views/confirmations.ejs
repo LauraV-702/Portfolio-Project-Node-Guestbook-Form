@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+</head>
+<body>
+    <h1>Thank you, <%= details.firstname %> <%= details.lastname %>!</h1>
+    <p>Your submission:</p>
+    <p>Job Title: <%= details.jobname %></p>
+    <p>Company: <%= details.Company %></p>
+    <p>LinkedIn: <%= details.LinkedIn %></p>
+    <p>Email: <%= details.email %></p>
+    <p>Meet Method: <%= details.meet_method %></p>
+    <p>Other Meet Method: <%= details.otherInput %></p>
+    <p>Message: <%= details.message %></p>
+    <p>Mailing List: <%= details.mailinglist ? 'Yes' : 'No' %></p>
+    <p>Email Format: <%= details.email_format %></p>
+</body>
+</html>
+
+
+

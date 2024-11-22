@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Guestbook Form</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/err-styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+
+    <!-- Script -->
+    <script defer src="javascript/script.js" defer></script>
+</head>    
+
+    <body>
+        <form action="/confirm" method="POST">
+
+                <div class="grid-input-container">
+                    <h1> Contact Form </h1>
+                    <!-- _____________ USER SMALL STUFF _____________ -->
+                    <div class="user-small">
+                        
+                        <div class="grid-input-item"> 
+                            <label for="fname">First Name<span class="asterisk">*</span></label>
+                            <span id="err-fname" class="err">Field is required</span>
+                            <input type="text" id="fname" name="firstname">
+                            
+                        </div>
+
+                        <div class="grid-input-item">
+                            <label for="lname">Last Name<span class="asterisk">*</span></label>
+                            <span id="err-lname" class="err">Field is required</span>
+                            <input type="text" id="lname" name="lastname">
+                            
+                        </div>
+
+                        <div class="grid-input-item"> 
+                            <label for="jobname">Job Title</label>
+                            <span id="err-job" class="err">Field is required</span>
+                            <input type="text" id="jobname" name="jobname">
+                        </div>
+
+                        <div class="grid-input-item">
+                            <label for="Company">Company</label>
+                            <span id="err-company" class="err">Field is required</span>
+                            <input type="text" id="company" name="Company">
+                        </div>
+
+                        <div class="grid-input-item">
+                            <label for="LinkedIn">LinkedIn URL</label>
+                            <span id="err-linked" class="err">
+                                "Must start with \"https://linkedin.com/in/\"
+                            </span>
+                            <input type="text" id="LinkedIn" name="LinkedIn">
+                        </div>
+
+                        <div class="grid-input-item">
+                            <label for="email">Email Address</label>
+                            <span id="err-email" class="err"></span>
+                            <input type="text" id="email" name="email">
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- _____________ USER REASON _____________ -->
+                    <div class="user-reason">
+                        <div class="grid-input-item">
+                            <label for="meet-select">How did we meet?<span class="asterisk">*</span></label>
+                            <span id="err-meet" class="err">Field is required</span>
+                            <select id="meet-select" name="meet-select" onchange="validateMeeting()">
+                                <option value="none">Please Select</option>
+                                <option value="referral">Referral</option>
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    
+                        <div id="otherOption" style="display: none;">
+                            <label for="otherInput">Please specify:</label>
+                            <input type="text" id="otherInput" name="otherInput">
+                        </div>
+                    </div>
+
+                    <div class="message">
+                    <label for="message">Message:</label>
+                    <textarea rows="5" id="message" name="message"></textarea>
+                </div>
+                
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox" name="mailinglist" value="on" onclick="checkMe()">
+                        <label for="checkbox">Please add me to your mailing list</label>
+                        <span id="err-check" class="err"></span>
+                    </div>
+
+                    <div class="last-container" id="emailFormat">
+                        <label class="text"> Choose an email format:
+                            <input type="radio" id="HTML" name="HTML" value="HTML">HTML
+                        </label> 
+                        <label class="text"> 
+                            <input type="radio" id="text" name="text" value="text">Text
+                        </label>      
+                    </div>
+                <!-- Order button -->
+                <button type="submit" class="main-button">Submit</button>
+                </div>        
+        </form>
+             
+    </body>
+</html>
